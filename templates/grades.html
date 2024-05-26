@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Profile.css') }}">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <h2>Student Portal</h2>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li><a class="active" href="{{ url_for('grades') }}">Grades</a></li>
+                <li><a href="{{ url_for('attendance') }}">Attendance</a></li>
+                <li><a href="{{ url_for('timetable') }}">Time table</a></li>
+                <li><a href="{{ url_for('messages') }}">Messages</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>Grades</h1>
+            <section class="grades-section">
+                <h2>Your Grades</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Semester</th>
+                            <th>SGPA</th>
+                            <th>CGPA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for grade in grades %}
+                        <tr>
+                            <td>{{ grade.semester }}</td>
+                            <td>{{ grade.sgpa }}</td>
+                            <td>{{ grade.cgpa }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

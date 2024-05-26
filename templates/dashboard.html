@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Student Portal</h2>
+            <nav>
+                <ul>
+                    <li><a class="active" href="#dashboard">Dashboard</a></li>
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                    <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                    <li><a href="{{ url_for('grades') }}">Grades</a></li>
+                    <li><a href="{{ url_for('attendance') }}">Attendance</a></li>
+                    <li><a href="{{ url_for('timetable') }}">Time Table</a></li>
+                    <li><a href="{{ url_for('messages') }}">Messages</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+            </header>
+            <section class="content">
+                <div class="card">
+                    <h3>Welcome, {{ student_name }}</h3>
+                    <p>This is your student portal dashboard. Here you can find an overview of your profile, courses, grades, and messages.</p>
+                </div>
+                <div class="card">
+                    <h3>Recent Activity</h3>
+                    <p>No recent activity to display.</p>
+                </div>
+                <!-- Add more cards and content as needed -->
+            </section>
+        </main>
+    </div>
+</body>
+</html>

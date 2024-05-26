@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Attendance.css') }}">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <h2>Student Portal</h2>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li><a href="{{ url_for('grades') }}">Grades</a></li>
+                <li><a href="{{ url_for('attendance') }}" class="active">Attendance</a></li>
+                <li><a href="{{ url_for('timetable') }}">Time table</a></li>
+                <li><a href="{{ url_for('messages') }}">Messages</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>Attendance</h1>
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Total Classes</th>
+                        <th>Attended Classes</th>
+                        <th>Attendance (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Subject 1</td>
+                        <td>20</td>
+                        <td>15</td>
+                        <td>75%</td>
+                    </tr>
+                    <tr>
+                        <td>Subject 2</td>
+                        <td>22</td>
+                        <td>18</td>
+                        <td>81.82%</td>
+                    </tr>
+                    <!-- Add more rows for other subjects -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

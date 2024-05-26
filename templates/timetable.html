@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Time Table</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Timetable.css') }}">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <h2>Student Portal</h2>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li><a href="{{ url_for('grades') }}">Grades</a></li>
+                <li><a href="{{ url_for('attendance') }}">Attendance</a></li>
+                <li><a href="{{ url_for('timetable') }}" class="active">Time Table</a></li>
+                <li><a href="{{ url_for('messages') }}">Messages</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>Time Table</h1>
+            <table class="timetable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00 AM - 10:00 AM</td>
+                        <td>Maths</td>
+                        <td>English</td>
+                        <td>Science</td>
+                        <td>History</td>
+                        <td>Geography</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM - 11:00 AM</td>
+                        <td>Physics</td>
+                        <td>Chemistry</td>
+                        <td>Maths</td>
+                        <td>English</td>
+                        <td>Science</td>
+                    </tr>
+                    <!-- Add more rows for additional time slots -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

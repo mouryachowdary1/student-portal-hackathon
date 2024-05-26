@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="static/profile.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <h2>Student Portal</h2>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('profile') }}" class="active">Profile</a></li>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li><a href="{{ url_for('grades') }}">Grades</a></li>
+                <li><a href="{{ url_for('attendance') }}">Attendance</a></li>
+                <li><a href="{{ url_for('timetable') }}">Time table</a></li>
+                <li><a href="{{ url_for('messages') }}">Messages</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>User Profile</h1>
+            <div class="profile-info">
+                <div class="profile-section">
+                    <h2>Personal Information</h2>
+                    <p>Full Name: {{ full_name }}</p>
+                    <p>Email: {{ email }}</p>
+                    <p>Date of Birth: {{ dob }}</p>
+                    <p>Phone: {{ phone }}</p>
+                </div>
+                <div class="profile-section">
+                    <h2>Address</h2>
+                    <p>Street: {{ street }}</p>
+                    <p>City: {{ city }}</p>
+                    <p>State: {{ state }}</p>
+                    <p>Country: {{ country }}</p>
+                    <p>Postal Code: {{ postal_code }}</p>
+                </div>
+                <div class="profile-section">
+                    <h2>Preferences</h2>
+                    <p>Theme: {{ theme }}</p>
+                    <p>Language: {{ language }}</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
